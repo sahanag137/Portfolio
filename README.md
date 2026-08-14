@@ -45,7 +45,7 @@ Email Service: Resend API for secure transactional email delivery
 Validation: Server-side contact form input validation
 
 📂 Project Structure
-
+---
 portfolio/
 │
 ├── frontend/
@@ -88,7 +88,6 @@ portfolio/
 │   └── postcss.config.js
 │
 ├── backend/
-│   │
 │   ├── routes/
 │   │   ├── __init__.py
 │   │   └── contact.py
