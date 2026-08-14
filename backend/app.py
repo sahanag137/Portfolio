@@ -10,11 +10,12 @@ def create_app():
 
     # Configure CORS for frontend Vite dev server & production origins
     allowed_origins = [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000"
-    ]
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://portfolio1-kq8bv9pv8-aiet4.vercel.app"
+]
     
     CORS(app, resources={
         r"/api/*": {
