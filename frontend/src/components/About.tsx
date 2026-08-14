@@ -37,30 +37,19 @@ export const About: React.FC = () => {
             <div className="lg:col-span-5 flex flex-col items-center justify-center relative py-6">
               
               {/* Profile Avatar Frame */}
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-dashed border-[#1C1C1E] bg-[#FAF8F5] flex flex-col items-center justify-center p-4 shadow-sketch">
-                
-                {/* Pencil Sketch Avatar Icon */}
-                <svg className="w-24 h-24 text-[#1C1C1E]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Face Outline */}
-                  <circle cx="50" cy="40" r="24" stroke="#1C1C1E" strokeWidth="2.5" fill="#FFFFFF" />
-                  {/* Glasses Sketch */}
-                  <rect x="34" y="34" width="12" height="10" rx="2" stroke="#1C1C1E" strokeWidth="2" fill="none" />
-                  <rect x="54" y="34" width="12" height="10" rx="2" stroke="#1C1C1E" strokeWidth="2" fill="none" />
-                  <line x1="46" y1="39" x2="54" y2="39" stroke="#1C1C1E" strokeWidth="2" />
-                  {/* Smile */}
-                  <path d="M 42 50 Q 50 56 58 50" stroke="#1C1C1E" strokeWidth="2" strokeLinecap="round" />
-                  {/* Hair Doodle */}
-                  <path d="M 28 35 C 30 20, 50 15, 72 32 C 60 25, 40 22, 28 35 Z" fill="#1C1C1E" />
-                  {/* Shoulders */}
-                  <path d="M 20 85 C 20 68, 35 62, 50 62 C 65 62, 80 68, 80 85" stroke="#1C1C1E" strokeWidth="2.5" fill="#F4F1EA" />
-                </svg>
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border border-[#1C1C1E] overflow-hidden shadow-sketch">
+                <img
+                  src="/src/assets/sahana.jpeg"
+                  alt="Sahana G"
+                 className="w-full h-full object-cover object-top"
+                />
+              </div>
 
-                <span className="font-hand text-xl font-bold text-[#1C1C1E] mt-2">
-                  Sahana G
-                </span>
-                <span className="font-mono text-xs text-[#5A5A5E]">
-                  @sahanag137
-                </span>
+              {/* Name tag below photo */}
+              <div className="mt-4 text-center">
+                <span className="font-hand text-xl font-bold text-[#1C1C1E]">Sahana G</span>
+                <br />
+                <span className="font-mono text-xs text-[#5A5A5E]">@sahanag137</span>
               </div>
 
               {/* Orbiting Handwritten Badges around avatar */}
