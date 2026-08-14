@@ -48,9 +48,10 @@ Validation: Server-side contact form input validation
 
 portfolio/
 ├── frontend/
+|   |── public/
+|   |     |── sahana.jpeg
 │   ├── src/
 |   |   |──assets/
-|   |   |    |──sahana.jpeg
 |   |   |    |──sahana1.jpeg
 │   │   ├── components/
 │   │   │   ├── About.tsx

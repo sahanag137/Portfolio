@@ -39,7 +39,7 @@ export const About: React.FC = () => {
               {/* Profile Avatar Frame */}
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border border-[#1C1C1E] overflow-hidden shadow-sketch">
                 <img
-                  src="/src/assets/sahana.jpeg"
+                  src="/sahana.jpeg"
                   alt="Sahana G"
                  className="w-full h-full object-cover object-top"
                 />
