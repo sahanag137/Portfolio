@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #1C1C1E;
+    /* Subtle paper noise texture */
+    background-image: radial-gradient(#EAE5D9 0.75px, transparent 0.75px), radial-gradient(#EAE5D9 0.75px, #FAF8F5 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+}
+
+/* Pencil hand-drawn utilities */
+.sketch-box {
+  border: 2px solid #1C1C1E;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 3px 4px 0px 0px #1C1C1E;
+  background-color: #FFFFFF;
+}
+
+.sketch-box-subtle {
+  border: 2px dashed #6E6E73;
+  border-radius: 12px 255px 15px 225px/225px 15px 255px 15px;
+  background-color: #F4F1EA;
+}
+
+.sketch-button {
+  border: 2px solid #1C1C1E;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 3px 4px 0px 0px #1C1C1E;
+  transition: all 0.2s ease-in-out;
+}
+
+.sketch-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 6px 0px 0px #1C1C1E;
+}
+
+.sketch-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 2px 0px 0px #1C1C1E;
+}
+
+.pencil-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.pencil-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: radial-gradient(circle, #1C1C1E 70%, transparent 70%);
+  background-size: 6px 3px;
+  transform: scaleX(0.95) rotate(-0.5deg);
+  transition: transform 0.3s ease;
+}
+
+.pencil-underline:hover::after {
+  transform: scaleX(1.05) rotate(0.5deg);
+}
+
+/* Notebook paper horizontal lines */
+.notebook-lines {
+  background-image: repeating-linear-gradient(#FAF8F5, #FAF8F5 31px, #E5E2DA 32px);
+}
+
+/* Crosshatch shading background pattern */
+.bg-crosshatch {
+  background-image: repeating-linear-gradient(45deg, rgba(28, 28, 30, 0.05) 0, rgba(28, 28, 30, 0.05) 1px, transparent 0, transparent 50%),
+                    repeating-linear-gradient(-45deg, rgba(28, 28, 30, 0.05) 0, rgba(28, 28, 30, 0.05) 1px, transparent 0, transparent 50%);
+  background-size: 10px 10px;
+}
+
+/* Subtle float animation for sketch doodles */
+@keyframes sketch-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(1deg); }
+}
+
+.animate-sketch-float {
+  animation: sketch-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sketch-float {
+    animation: none !important;
+  }
+  .sketch-button:hover {
+    transform: none !important;
+  }
+}

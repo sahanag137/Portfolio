@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+ENV/
+env/
+.vite/
+# Build & Dist
+dist/
+build/
+*.egg-info/
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Python cache
+*.pyc
+__pycache__/
+
+# IDEs & System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
