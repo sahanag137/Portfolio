@@ -47,12 +47,16 @@ Validation: Server-side contact form input validation
 📂 Project Structure
 
 portfolio/
+│
 ├── frontend/
-|   |── public/
-|   |     |── sahana.jpeg
+│   │
+│   ├── public/
+│   │   └── sahana.jpeg
+│   │
 │   ├── src/
-|   |   |──assets/
-|   |   |    |──sahana1.jpeg
+│   │   ├── assets/
+│   │   │   └── sahana1.jpeg
+│   │   │
 │   │   ├── components/
 │   │   │   ├── About.tsx
 │   │   │   ├── Contact.tsx
@@ -64,15 +68,18 @@ portfolio/
 │   │   │   ├── ProjectSection.tsx
 │   │   │   ├── SketchDoodles.tsx
 │   │   │   └── SkillsMindMap.tsx
+│   │   │
 │   │   ├── data/
 │   │   │   └── portfolioData.ts
+│   │   │
 │   │   ├── services/
 │   │   │   └── contactService.ts
+│   │   │
 │   │   ├── App.tsx
 │   │   ├── main.tsx
 │   │   ├── index.css
 │   │   └── vite-env.d.ts
-│   ├── node_modules/
+│   │
 │   ├── index.html
 │   ├── package.json
 │   ├── tsconfig.json
@@ -81,13 +88,16 @@ portfolio/
 │   └── postcss.config.js
 │
 ├── backend/
+│   │
 │   ├── routes/
 │   │   ├── __init__.py
 │   │   └── contact.py
+│   │
 │   ├── utils/
 │   │   ├── __init__.py
 │   │   ├── validators.py
 │   │   └── email_service.py
+│   │
 │   ├── app.py
 │   ├── config.py
 │   └── requirements.txt
