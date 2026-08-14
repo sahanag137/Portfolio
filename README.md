@@ -37,64 +37,51 @@ This website represents Sahana's journey as a Data Science student, developer, a
 ## 📂 Project Structure
 
 ```
-sahana-portfolio/
-│
+portfolio/
 ├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── About.tsx
+│   │   │   ├── Contact.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── GitHubSection.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Learning.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── ProjectSection.tsx
+│   │   │   ├── SketchDoodles.tsx
+│   │   │   └── SkillsMindMap.tsx
+│   │   ├── data/
+│   │   │   └── portfolioData.ts
+│   │   ├── services/
+│   │   │   └── contactService.ts
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   ├── index.css
+│   │   └── vite-env.d.ts
+│   ├── node_modules/
 │   ├── index.html
 │   ├── package.json
-│   ├── package-lock.json
 │   ├── tsconfig.json
-│   ├── tsconfig.node.json
 │   ├── vite.config.ts
 │   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── .env.example
-│   │
-│   └── src/
-│       ├── main.tsx
-│       ├── App.tsx
-│       ├── index.css
-│       │
-│       ├── data/
-│       │   └── portfolioData.ts       # Centralized personal & project data
-│       │
-│       ├── components/
-│       │   ├── Navbar.tsx             # Minimal sticky navigation & mobile drawer
-│       │   ├── Hero.tsx               # Graphite hero with hand-drawn laptop illustration
-│       │   ├── About.tsx              # Notebook page layout & persona badges
-│       │   ├── SkillsMindMap.tsx      # Pencil-drawn mind map ("ME + CODE")
-│       │   ├── ProjectSection.tsx     # Asymmetric project pages with architectural diagrams
-│       │   ├── Learning.tsx           # Hand-drawn sticky notes & progress arrows
-│       │   ├── GitHubSection.tsx      # Sketched laptop & repository highlights
-│       │   ├── Contact.tsx            # Hand-drawn notebook paper contact form
-│       │   ├── Footer.tsx             # Minimal sketchbook footer
-│       │   └── SketchDoodles.tsx      # Reusable SVG graphite doodles & cross-hatching
-│       │
-│       └── services/
-│           └── contactService.ts      # API fetch client wrapper for Flask contact API
+│   └── postcss.config.js
 │
 ├── backend/
-│   ├── app.py                         # Flask app entrypoint & CORS configuration
-│   ├── requirements.txt               # Python package dependencies
-│   ├── .env                           # Local backend environment variables (gitignored)
-│   ├── .env.example                   # Environment variable template
-│   ├── .gitignore
-│   │
-│   ├── config.py                      # App configuration loader
-│   │
 │   ├── routes/
 │   │   ├── __init__.py
-│   │   └── contact.py                 # POST /api/contact route controller
-│   │
-│   └── utils/
-│       ├── __init__.py
-│       ├── email_service.py           # Secure SMTP mailer with TLS & dev logger
-│       └── validators.py              # Server-side validation helpers
+│   │   └── contact.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── validators.py
+│   │   └── email_service.py
+│   ├── app.py
+│   ├── config.py
+│   ├── requirements.txt
+│   └── .env
 │
 ├── README.md
 └── .gitignore
-```
-
 ---
 
 ## 🚀 Getting Started
