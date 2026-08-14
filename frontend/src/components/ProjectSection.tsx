@@ -1,7 +1,7 @@
 import React from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
-import { LibraryProjectSketchSvg, RetailFlowArchitectureSvg, PencilUnderline, SketchStar } from './SketchDoodles';
-import { ExternalLink, Github, Code2, Database } from 'lucide-react';
+import { LibraryProjectSketchSvg, RetailFlowArchitectureSvg, PencilUnderline,} from './SketchDoodles';
+import {  Github } from 'lucide-react';
 
 export const ProjectSection: React.FC = () => {
   return (

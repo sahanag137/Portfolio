@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { sendContactMessage } from '../services/contactService';
-import { PencilUnderline, SketchArrow, SketchStar } from './SketchDoodles';
+import { PencilUnderline, SketchArrow,  } from './SketchDoodles';
 import { Mail, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
 export const Contact: React.FC = () => {
