@@ -177,7 +177,7 @@ The backend API will run at http://127.0.0.1:5000.
 
 The portfolio is deployed as separate frontend and backend services:
 
-Frontend: Vercel — https://portfolio1-kq8bv9pv8-aiet4.vercel.app
+Frontend: Vercel —https://portfolio1-7pfcmy23c-aiet4.vercel.app/
 
 Backend: Render — https://sahana-portfolio-backend.onrender.com
 
