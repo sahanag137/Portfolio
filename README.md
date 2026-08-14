@@ -1,42 +1,51 @@
-# Sahana G — Personal Developer Portfolio (Sketchbook Edition)
+Sahana G — Personal Developer Portfolio (Sketchbook Edition)
 
-A complete full-stack developer portfolio for **Sahana G**, designed as a living, hand-drawn graphite pencil sketchbook brought to life on the web.
+A complete full-stack developer portfolio for Sahana G, designed as a living, hand-drawn graphite pencil sketchbook brought to life on the web.
 
-![Portfolio Visual Style](https://raw.githubusercontent.com/sahanag137/sahanag137/main/preview.png) *(Sketchbook Aesthetic)*
+ (Sketchbook Aesthetic)
 
----
+📌 Project Overview
 
-## 📌 Project Overview
+This website represents Sahana's journey as a Data Science student, developer, and DSA enthusiast. Designed with an authentic black-and-white graphite pencil sketchbook aesthetic, it features:
 
-This website represents Sahana's journey as a Data Science student, developer, and DSA enthusiast. Designed with an authentic **black-and-white graphite pencil sketchbook aesthetic**, it features:
-- White & off-white paper texture tones
-- Hand-drawn sketch arrows, cross-hatch shading, and handwritten annotations
-- Custom interactive SVG diagrams (Library Management borrow/return flow & RetailFlow ETL architecture)
-- Interactive hand-drawn skill mind map
-- Full contact form backed by a Python Flask REST API with secure email dispatching
+White & off-white paper texture tones
 
----
+Hand-drawn sketch arrows, cross-hatch shading, and handwritten annotations
 
-## 🛠️ Tech Stack
+Custom interactive SVG diagrams (Library Management borrow/return flow & RetailFlow ETL architecture)
 
-### Frontend
-- **Framework**: React 18 (TypeScript)
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS, Custom Graphite CSS variables, SVG filter patterns
-- **Icons**: Lucide React
-- **Typography**: Space Grotesk (Modern Sans), Caveat (Handwritten), Fira Code (Mono)
+Interactive hand-drawn skill mind map
 
-### Backend
-- **Framework**: Python 3.x, Flask
-- **Middleware**: Flask-CORS
-- **Environment**: python-dotenv
-- **Security & Mail**: Standard SMTP with TLS, robust server-side input validators
+Full contact form backed by a Python Flask REST API with secure email dispatching
 
----
+🛠️ Tech Stack
 
-## 📂 Project Structure
+Frontend
 
-```
+Framework: React 18 (TypeScript)
+
+Build Tool: Vite
+
+Styling: Tailwind CSS, Custom Graphite CSS variables, SVG filter patterns
+
+Icons: Lucide React
+
+Typography: Space Grotesk (Modern Sans), Caveat (Handwritten), Fira Code (Mono)
+
+Backend
+
+Framework: Python 3.x, Flask
+
+Middleware: Flask-CORS
+
+Environment: python-dotenv
+
+Email Service: Resend API for secure transactional email delivery
+
+Validation: Server-side contact form input validation
+
+📂 Project Structure
+
 portfolio/
 ├── frontend/
 │   ├── src/
@@ -77,8 +86,7 @@ portfolio/
 │   │   └── email_service.py
 │   ├── app.py
 │   ├── config.py
-│   ├── requirements.txt
-│   └── .env
+│   └── requirements.txt
 │
 ├── README.md
 └── .gitignore
@@ -97,132 +105,130 @@ portfolio/
 1. Navigate to the `frontend` directory:
    ```bash
    cd frontend
-   ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+Install dependencies:
 
-3. Create your `.env` file from `.env.example`:
-   ```bash
-   cp .env.example .env
-   ```
-   *By default, `VITE_API_URL` is set to `http://127.0.0.1:5000`.*
+npm install
 
-4. Run the Vite development server:
-   ```bash
-   npm run dev
-   ```
-   The frontend will run at `http://localhost:5173`.
+Create your .env file from .env.example:
 
----
+cp .env.example .env
 
-### 2. Backend Setup
+For production, set VITE_API_URL to the deployed Render backend URL.
 
-1. Navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
+Run the Vite development server:
 
-2. Create and activate a Python virtual environment:
-   - **Windows**:
-     ```cmd
-     python -m venv .venv
-     .venv\Scripts\activate
-     ```
-   - **macOS/Linux**:
-     ```bash
-     python3 -m venv .venv
-     source .venv/bin/activate
-     ```
+npm run dev
 
-3. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   ```
+The frontend will run at http://localhost:5173.
 
-4. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   ```
+2. Backend Setup
 
-   Edit `backend/.env`:
-   ```env
-   SECRET_KEY=your-super-secret-key-change-this
-   MAIL_SERVER=smtp.gmail.com
-   MAIL_PORT=587
-   MAIL_USE_TLS=true
-   MAIL_USERNAME=your_email@gmail.com
-   MAIL_PASSWORD=your_app_password
-   MAIL_RECEIVER=sahana.gcsds@gmail.com
-   FLASK_ENV=development
-   PORT=5000
-   ```
-   > 💡 **Note**: If `MAIL_USERNAME` and `MAIL_PASSWORD` are not set, the backend runs in **Development Mode** and prints incoming messages cleanly to the server logs without failing.
+Navigate to the backend directory:
 
-5. Start the Flask backend:
-   ```bash
-   python app.py
-   ```
-   The backend API will run at `http://127.0.0.1:5000`.
+cd backend
 
----
+Create and activate a Python virtual environment:
 
-## 📡 API Endpoints
+Windows:
 
-### `POST /api/contact`
+python -m venv .venv
+.venv\Scripts\activate
+
+macOS/Linux:
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+Install requirements:
+
+pip install -r requirements.txt
+
+Set up environment variables:
+
+For local development, create backend/.env and configure:
+
+SECRET_KEY=your-super-secret-key-change-this
+MAIL_RECEIVER=your_receiving_email@example.com
+RESEND_API_KEY=your_resend_api_key
+FLASK_ENV=development
+PORT=5000
+
+💡 Security: Never commit .env files or API keys to GitHub. In production, add RESEND_API_KEY and MAIL_RECEIVER through your hosting provider's environment-variable settings.
+
+Start the Flask backend:
+
+python app.py
+
+The backend API will run at http://127.0.0.1:5000.
+
+🌐 Deployment
+
+The portfolio is deployed as separate frontend and backend services:
+
+Frontend: Vercel — https://portfolio1-kq8bv9pv8-aiet4.vercel.app
+
+Backend: Render — https://sahana-portfolio-backend.onrender.com
+
+Backend Health Check: https://sahana-portfolio-backend.onrender.com
+
+The React frontend sends contact-form requests to the Flask REST API. The Flask backend uses the Resend API for email delivery, while API keys remain server-side.
+
+📡 API Endpoints
+
+POST /api/contact
+
 Receives contact form submissions and dispatches emails.
 
-**Request Payload:**
-```json
+Request Payload:
+
 {
   "name": "Visitor Name",
   "email": "visitor@example.com",
   "message": "Hello Sahana, I saw your portfolio!"
 }
-```
 
-**Success Response (200 OK):**
-```json
+Success Response (200 OK):
+
 {
   "success": true,
   "message": "Message sent successfully!"
 }
-```
 
-**Error Response (400 Bad Request / 500 Server Error):**
-```json
+Error Response (400 Bad Request / 500 Server Error):
+
 {
   "success": false,
   "message": "Please enter a valid email address."
 }
-```
 
----
+🔒 Security Best Practices
 
-## 🔒 Security Best Practices
+No Credentials in Frontend: All email delivery happens on the Python Flask backend.
 
-1. **No Credentials in Frontend**: All mail dispatch operations occur strictly on the Python Flask backend.
-2. **Environment Isolation**: `.env` files are gitignored. Always commit `.env.example` templates instead.
-3. **CORS Policy**: Configured to restrict requests in production.
-4. **App Passwords**: When using Gmail SMTP, generate an **App Password** from Google Account Security.
+Environment Isolation: .env files are gitignored. Never commit API keys, passwords, or other secrets.
 
----
+Resend API Key: RESEND_API_KEY is stored only as a server-side environment variable.
 
-## 📜 Projects Featured
+CORS Policy: The backend restricts API requests to approved frontend origins.
 
-1. **Library Management System**
-   - Full-stack web application for managing books, members, authentication, borrowing, returning, transactions, and library operations.
-   - [Repository](https://github.com/sahanag137/Library-Management-system-Flask-)
+Input Validation: Contact form data is validated server-side before email delivery.
 
-2. **RetailFlow**
-   - End-to-end retail data engineering pipeline covering synthetic data generation, ETL processing, database integration, SQL analytics, and Power BI dashboards.
-   - [Repository](https://github.com/sahanag137/RetailFlow-Data-Engineering-Pipeline)
+📜 Projects Featured
 
----
+Library Management System
 
-## 📄 License & Credits
+Full-stack web application for managing books, members, authentication, borrowing, returning, transactions, and library operations.
 
-Designed and coded by **Sahana G** © 2026.
-*"Designed, coded & probably debugged several times."*
+Repository
+
+RetailFlow
+
+End-to-end retail data engineering pipeline covering synthetic data generation, ETL processing, database integration, SQL analytics, and Power BI dashboards.
+
+Repository
+
+📄 License & Credits
+
+Designed and coded by Sahana G © 2026.
+"Designed, coded & probably debugged several times."
