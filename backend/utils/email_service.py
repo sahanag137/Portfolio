@@ -2,7 +2,9 @@ import os
 import logging
 import html
 import resend
+from dotenv import load_dotenv
 
+load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

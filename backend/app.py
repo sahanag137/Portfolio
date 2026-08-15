@@ -14,16 +14,25 @@ def create_app():
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://portfolio1-kq8bv9pv8-aiet4.vercel.app"
+    "https://portfolio1-mu-rouge-30.vercel.app"
 ]
     
-    CORS(app, resources={
+    CORS(
+    app,
+    resources={
         r"/api/*": {
-            "origins": allowed_origins,
-            "methods": ["POST", "GET", "OPTIONS"],
+            "origins": [
+                "http://localhost:5173",
+                "http://127.0.0.1:5173",
+                "http://localhost:3000",
+                "http://127.0.0.1:3000",
+                "https://portfolio1-mu-rouge-30.vercel.app"
+            ],
+            "methods": ["GET", "POST", "OPTIONS"],
             "allow_headers": ["Content-Type", "Authorization"]
         }
-    })
+    }
+)
 
     # Register blueprints
     app.register_blueprint(contact_bp)
